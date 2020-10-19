@@ -44,14 +44,14 @@ const onSuccess = async (req, res) => {
     const OAuth2Client = await auth.auth.authedUser.getClient(req, res, email);
     google.options({auth: OAuth2Client});
   } catch (err) {
-    console.log(err);
+    console.error(err);
     throw err;
   }
 
   try {
     await setUpGmailPushNotifications(email, PUBSUB_TOPIC);
   } catch (err) {
-    console.log(err);
+    console.error(err);
     if (!err.toString().includes('one user push notification client allowed per developer')) {
       throw err;
     }
@@ -62,7 +62,7 @@ const onSuccess = async (req, res) => {
 
 // If the authorization process fails, return an error message.
 const onFailure = (err, req, res) => {
-  console.log(err);
+  console.error(err);
   res.send(`An error has occurred in the authorization process.`);
 };
 
