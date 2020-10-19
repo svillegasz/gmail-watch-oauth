@@ -10,6 +10,8 @@ const gmail = google.gmail('v1');
 // registered OAuth client access to your profile, email address, and data in
 // your Gmail and Google Sheets.
 const requiredScopes = [
+  'profile',
+  'email',
   'https://www.googleapis.com/auth/gmail.readonly'
 ];
 
