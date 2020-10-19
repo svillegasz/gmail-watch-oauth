@@ -1,0 +1,30 @@
+{
+  "name": "gmail-watch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svillegasz/gmail-watch-oauth.git"
+  },
+  "keywords": [
+    "gmail",
+    "watch",
+    "oatuh",
+    "automation"
+  ],
+  "author": "svillegasz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svillegasz/gmail-watch-oauth/issues"
+  },
+  "homepage": "https://github.com/svillegasz/gmail-watch-oauth#readme",
+  "dependencies": {
+    "@google-cloud/express-oauth2-handlers": "^0.1.2",
+    "express": "^4.17.1",
+    "googleapis": "^61.0.0"
+  }
+}
